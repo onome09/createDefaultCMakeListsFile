@@ -12,9 +12,6 @@ int main(){
   std::cout << p.filename() << std::endl;
   std::string line = "add_executable(" + p.filename().string() + " ${SOURCES})";
   std::ofstream myfile;
-  if ( boost::filesystem::exists( "CMakeLists.txt" ) ){
-    return 0;
-  }
   myfile.open ("CMakeLists.txt");
 
   myfile << "cmake_minimum_required (VERSION 3.0)\n";
